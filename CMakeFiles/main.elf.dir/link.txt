@@ -1,0 +1,1 @@
+/mingw64/bin/cc.exe -Wl,--enable-auto-import CMakeFiles/main.elf.dir/src/scheduler.c.o CMakeFiles/main.elf.dir/src/task.c.o CMakeFiles/main.elf.dir/cmsis_device_f1/Source/Templates/system_stm32f1xx.c.o -o main.elf.exe -Wl,--out-implib,libmain.elf.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

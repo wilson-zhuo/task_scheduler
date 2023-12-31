@@ -1,0 +1,81 @@
+# 规定最低cmake版本
+cmake_minimum_required(VERSION 3.0.0)
+#[[块注释
+可以直接换行
+]]
+#[[---PROJECT 语法----
+<MUST HAVE>;
+[OPTIONAL];
+project(<PROJECT-NAME>
+        '[VERSION <major>[.<minor>.[.<tweak>]\]\]
+        [DESCRIPTION <project-decription-string>]
+        [HOMEPAGE_URL <url-string>]
+        [LANGUAGES <language-name>...])
+]]
+project(TASK_SCHEDULER)
+#设置编译信息
+set(COMPILER_PRESUFFIX "C:/Users/wilson/program/arm-gnu-toolchain-12.2.rel1/bin/arm-none-eabi-")
+#for embedded target without real OS 'CMAKE_SYSTEM_NAME' set to Generic
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR ARM)
+set(CMAKE_C_COMPILER ${COMPILER_PRESUFFIX}gcc)
+set(CMAKE_ASM_COMPILER ${COMPILER_PRESUFFIX}as)
+set(CMAKE_CXX_COMPILER ${COMPILER_PRESUFFIX}g++)
+#设置编译参数
+enable_language(C ASM)
+
+#使用 'set(VAR [VALUE] [CACHE TYPE DOCSTRING [FORCE]])'定义变量
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_ECTENSIONS OFF)
+set(HOME ${PROJECT_SOURCE_DIR}/build)
+set(EXECUTABLE_OUT_PATH ${HOME}/bin)
+set(EXECUTABLE_TARGET ${HOME}/${PROJECT_NAME}.elf)
+#使用'file(GLOB/GLOB_RECUSE VAR_NAME SEARCH-PATH)'搜索文件保存到变量中
+#file(GLOB SRC_LIST ./src/*.c)
+#'include_directories(<path>)'搜索头文件
+include_directories(${PROJECT_SOURCE_DIR}/inc)
+#使用'aux_source_dirtory(<dir> <variable>)'查找源文件
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+file(GLOB_RECURSE SRC_ASM_LIST ${PROJECT_SOURCE_DIR}/cmsis_device_f1/Source/Templates/gcc/startup_stm32f103x6.s)
+file(GLOB_RECURSE SRC_C_LIST2 ${PROJECT_SOURCE_DIR}/cmsis_device_f1/*.c)
+
+#使用'link_directories(<lib_path>)'设置库搜索路径
+#使用'link_libraries(<lib_name>)'链接库
+#使用'add_library(<lib_name> <STAIC/SHARE> <file_list>)'生成库文件
+link_directories(
+#变量拼接,适合有多个不同源文件路径的工程'set(TARGET_VAR ${VAR1} ${VAR2}...)
+set(NEW_SRC_LIST ${SRC_LIST} ${SRC_C_LIST2} ${SRC_ASM_LIST})
+#使用list拼接'list(APPEND <list> [<element> ...])
+#追加'APPEND'
+list(APPEND NEW_SRC_LIST1 ${SRC_ASM_LIST} ${SRC_C_LIST2} ${SRC_LIST})
+message(STATUS "set NEW_SRC_LIST:${NEW_SRC_LIST};list:NEW_SRC_LIST1:${NEW_SRC_LIST1}")
+#移除'REMOVE_ITEM' list(REMOVE_ITEM <list> <value> [<value> ...])
+#[[通过 file 命令搜索源文件的时候得到的是文件的绝对路径（在list中每个文件对应的路径都是一个item，
+并且都是绝对路径），那么在移除的时候也要将该文件的绝对路径指定出来才可以，否是移除操作不会成功。]]
+list(REMOVE_ITEM NEW_SRC_LIST1 ${PROJECT_SOURCE_DIR}/src/task.c)#需要具体的item
+message(STATUS 'NEW_SRC_LIST1:${NEW_SRC_LIST1}')
+#'add_definitions(-D<MACRO_NAME>)'添加预编译宏
+
+target_compile_definitions(${EXECUTABLE_TARGET} PRIVATE
+                                -DUSE_STD_DRIVER
+                                -D
+                                )
+target_include_directories(${EXECUTABLE_TARGET} PRIVATE
+                           ./inc
+                           )
+target_compile_options(${EXECUTABLE_TARGET} PRIVATE
+                        -mcpu=cotrex-m3
+                        -mthumb
+                        -mfpu=soft
+                        -mfloat=soft
+                        -fdata-sections
+                        -ffunction-sections
+                        -Wall
+                        $<$<CONFIG:Debug>:-Og>
+                        )
+target_link_options()
+#[[ add_executable(executfilename src-list)]]
+#'message([STATUS]|WARNING|AUTHOR_WARNING|FATAL_ERROR|SEND_ERROR] "message content")'显示日志消息
+message(STATUS "add executable file")
+add_executable(main.elf ${NEW_SRC_LIST})

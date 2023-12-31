@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "task.h": "c",
+        "scheduler.h": "c",
+        "stm32f103x6.h": "c",
+        "core_cm3.h": "c",
+        "system_stm32f1xx.h": "c",
+        "stdlib.h": "c",
+        "inspectable.h": "c",
+        "stm32f1xx.h": "c"
+    },
+    "C_Cpp.default.includePath": [
+        "C:\\Users\\wilson\\AppData\\Roaming\\CMSIS-Packs\\ARM\\CMSIS\\5.9.0\\CMSIS\\Core\\Include",
+        "C:\\Users\\wilson\\program\\project\\task_scheduler\\cmsis_device_f1\\Include"
+    ]
+}

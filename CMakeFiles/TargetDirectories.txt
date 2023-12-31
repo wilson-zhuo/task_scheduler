@@ -1,0 +1,3 @@
+/c/Users/wilson/program/project/task_scheduler/CMakeFiles/main.elf.dir
+/c/Users/wilson/program/project/task_scheduler/CMakeFiles/edit_cache.dir
+/c/Users/wilson/program/project/task_scheduler/CMakeFiles/rebuild_cache.dir

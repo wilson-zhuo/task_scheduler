@@ -1,0 +1,50 @@
+Dependencies for Project 'task_scheduler', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (..\main.c)(0x65916DC9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../inc -I ../cmsis_device_f1/Include-I./RTE/Device/STM32F103C6-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_LD -D_RTE_ -DSTM32F103x6-o ./objects/main.o -MD)
+I (..\cmsis_device_f1\Include\stm32f103x6.h)(0x656F377E)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F4ADE)
+I (..\cmsis_device_f1\Include\system_stm32f1xx.h)(0x656F377E)
+I (..\inc\task.h)(0x65916E07)
+I (..\inc\scheduler.h)(0x65916DEA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63884908)
+F (..\src\scheduler.c)(0x6591720F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../inc -I ../cmsis_device_f1/Include-I./RTE/Device/STM32F103C6-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_LD -D_RTE_ -DSTM32F103x6-o ./objects/scheduler.o -MD)
+I (..\src\..\inc\task.h)(0x65916E07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\src\..\inc\scheduler.h)(0x65916DEA)
+I (..\src\..\cmsis_device_f1\Include\stm32f103x6.h)(0x656F377E)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F4ADE)
+I (..\cmsis_device_f1\Include\system_stm32f1xx.h)(0x656F377E)
+F (..\src\task.c)(0x659172DA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../inc -I ../cmsis_device_f1/Include-I./RTE/Device/STM32F103C6-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_LD -D_RTE_ -DSTM32F103x6-o ./objects/task.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (..\src\..\inc\task.h)(0x65916E07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\src\..\inc\scheduler.h)(0x65916DEA)
+F (..\cmsis_device_f1\Source\Templates\system_stm32f1xx.c)(0x657EE69C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../inc -I ../cmsis_device_f1/Include-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_LD -D_RTE_ -DSTM32F103x6-o ./objects/system_stm32f1xx.o -MD)
+I (..\cmsis_device_f1\Include\stm32f1xx.h)(0x656F377E)
+I (..\cmsis_device_f1\Include\stm32f103x6.h)(0x656F377E)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F4ADE)
+I (..\cmsis_device_f1\Include\system_stm32f1xx.h)(0x656F377E)
+F (..\cmsis_device_f1\Source\Templates\gcc\startup_stm32f103x6.s)(0x656F377E)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=gnu -c-gdwarf-4-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-Wa,-defsym,__UVISION_VERSION=538 -Wa,-defsym,_RTE_=1 -Wa,-defsym,STM32F10X_LD=1 -Wa,-defsym,_RTE_=1-o ./objects/startup_stm32f103x6.o)
+F (RTE/Device/STM32F103C6/RTE_Device.h)(0x64E1BF35)()
+F (RTE/Device/STM32F103C6/startup_stm32f10x_ld.s)(0x64E1BF34)(--cpu Cortex-M3 -g --diag_suppress=A1950W-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-IC:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wilson\AppData\Roaming\CMSIS-Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include--pd "__UVISION_VERSION SETA 538"--pd "_RTE_ SETA 1"--pd "STM32F10X_LD SETA 1"--pd "_RTE_ SETA 1"-o .\objects\startup_stm32f10x_ld.o--depend .\objects\startup_stm32f10x_ld.d)
+F (RTE/Device/STM32F103C6/system_stm32f10x.c)(0x64E1BF34)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../inc -I ../cmsis_device_f1/Include-I./RTE/Device/STM32F103C6-I./RTE/_Target_1-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/wilson/AppData/Roaming/CMSIS-Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_LD -D_RTE_ -DSTM32F103x6-o ./objects/system_stm32f10x.o -MD)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x64E1BF34)
+I (RTE\_Target_1\RTE_Components.h)(0x658FFBD0)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F4ADE)
+I (C:\Users\wilson\AppData\Roaming\CMSIS-Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x64E1BF34)
